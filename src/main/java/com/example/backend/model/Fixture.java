@@ -1,5 +1,6 @@
 package com.example.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +21,6 @@ public class Fixture {
     private Long id;
 
     private Long code;
-
+    @JsonProperty("kickoff_time")
     private ZonedDateTime kickoffTime;
 }
